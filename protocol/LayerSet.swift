@@ -12,7 +12,8 @@ protocol LayerSet {
     //-----------------CGColorの色--------------------------------
     
     //-----------------borderを設定する----------------------------
-    var normalWidth: CGFloat { get }
+    var normalWidthInIpad: CGFloat { get }
+    var normalWidthInIpone: CGFloat { get }
     func setBorder(_ label: UILabel, _ color: CGColor, _ width: CGFloat)
     func setBorder(_ button: UIButton, _ color: CGColor, _ width: CGFloat)
     //------------------丸いコーナーを設定する-----------------------
@@ -82,8 +83,11 @@ extension LayerSet {
 
 //-----------------borderを設定する----------------------------
 extension LayerSet {  //border
-    var normalWidth: CGFloat {
+    var normalWidthInIpad: CGFloat {
         return 4
+    }
+    var normalWidthInIpone: CGFloat {
+        return 2
     }
     //label
     func setBorder(_ label: UILabel, _ color:CGColor, _ width: CGFloat) {
@@ -105,7 +109,7 @@ extension LayerSet {  //border
 //-----------------------------------------------------------
 
 
-//-----------------borderを設定する----------------------------
+//-----------------背景色を設定する----------------------------
 extension LayerSet { //backgroud-colorを設定する
     //label
     func setBackgroundColor(_ label: UILabel, _ color: CGColor) {
