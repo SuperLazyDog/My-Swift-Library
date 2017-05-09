@@ -13,7 +13,7 @@ protocol LayerSet {
     
     //-----------------borderを設定する----------------------------
     var normalWidthInIpad: CGFloat { get }
-    var normalWidthInIpone: CGFloat { get }
+    var normalWidthInIphone: CGFloat { get }
     func setBorder(_ label: UILabel, _ color: CGColor, _ width: CGFloat)
     func setBorder(_ button: UIButton, _ color: CGColor, _ width: CGFloat)
     //------------------丸いコーナーを設定する-----------------------
@@ -86,7 +86,7 @@ extension LayerSet {  //border
     var normalWidthInIpad: CGFloat {
         return 4
     }
-    var normalWidthInIpone: CGFloat {
+    var normalWidthInIphone: CGFloat {
         return 2
     }
     //label
